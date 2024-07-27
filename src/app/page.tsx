@@ -8,7 +8,7 @@ export default async function Home() {
   console.log(data, "data>>>>....");
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-20">
       <div className="">
         <h1>List of Users</h1>
         <UsersList initialUsers={data?.results} />
