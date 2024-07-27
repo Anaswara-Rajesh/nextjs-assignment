@@ -1,5 +1,4 @@
-"use client";
-
+"use client"
 import React, { useEffect, useState } from "react";
 import UserCard from "./UserCard";
 import { getUsers } from "../actions/getUsers";
@@ -41,7 +40,7 @@ const UsersList = ({ initialUsers }: any) => {
 
   return (
     <div className="flex flex-col items-center justify-center p-4 bg-gray-100 min-h-screen">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {users?.map((user: any, index: number) => (
           <UserCard key={index} user={user} onClick={handleCardClick} />
         ))}
