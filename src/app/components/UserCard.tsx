@@ -1,8 +1,13 @@
-export default function UserCard({ user }: any) {
+import React from 'react';
+
+export default function UserCard({ user, onClick }: { user: any; onClick: (user: any) => void }) {
   const userImage = user?.picture?.thumbnail;
 
   return (
-    <div className="bg-white text-gray-800 rounded-lg shadow-md w-80 mx-auto overflow-hidden transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-indigo-500/50">
+    <div
+      className="bg-white text-gray-800 rounded-lg shadow-md w-80 mx-auto overflow-hidden transition-transform transform hover:scale-105 hover:shadow-lg hover:shadow-indigo-500/50 cursor-pointer"
+      onClick={() => onClick(user)}
+    >
       <div className="flex justify-center p-4 bg-indigo-500">
         <img
           className="rounded-full border-4 border-white transition-transform transform hover:scale-110"
